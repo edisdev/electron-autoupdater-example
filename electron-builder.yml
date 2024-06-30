@@ -1,0 +1,22 @@
+appId: edisdev.${name}
+artifactName: ElectronAutoUpdaterDemo-${version}-${arch}-${os}.${ext}
+buildVersion: ${version}
+directories:
+  output: "release/${version}"
+publish:
+  provider: generic
+  url: x.s3.eu-west-1.amazonaws.com
+  channel: latest
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+mac:
+  target: [dmg, zip]
+  category: public.app-category.software
+  type: distribution
+dmg:
+  title: Electron Auto Updater Demo
+  backgroundColor: "#eeeeee"

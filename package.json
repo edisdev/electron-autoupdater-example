@@ -1,0 +1,21 @@
+{
+  "name": "electron-auto-updater-demo",
+  "version": "1.0.1",
+  "description": "Electron Auto Updater Demo",
+  "main": "electron/main.js",
+  "author": "edisdev<edisdev14@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "electron electron/main.js",
+    "build:win": "electron-builder --win",  
+    "build:mac": "CSC_FOR_PULL_REQUEST=true CSC_LINK=certs/x.p12 CSC_KEY_PASSWORD=xxx electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.2.1"
+  }
+}
